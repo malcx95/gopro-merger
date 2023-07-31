@@ -37,7 +37,7 @@ def main():
                 [f"file '{input_path / file_name}'" for file_name in files]
             ))
         subprocess.run([
-            "ffmpeg", "-f", "concat", "-safe", "0", "-i", list_file_name, "-c", "copy", input_path / (name + ".mp4")
+            "ffmpeg", "-f", "concat", "-safe", "0", "-i", list_file_name, "-c", "copy", output_path / (name + ".mp4")
         ])
         os.remove(list_file_name)
 
